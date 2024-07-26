@@ -111,6 +111,7 @@ body {
         gap: 10px; /* Adjust gap to fit content */
         padding: 0 10px; /* Add padding to the left and right */
         margin-left: 5%; /* Add margin from left to ensure visibility */
+        margin-right: 5%;
     }
 
     .navbar-left {
