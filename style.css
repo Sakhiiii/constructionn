@@ -119,4 +119,7 @@
     .navbar-left h1 {
         display: none; /* Hide the title in the left section on mobile screens */
     }
+    .navbar-right {
+        gap: 8px;
+    }    
 }
