@@ -11,40 +11,83 @@
 <body>
     <nav class="navbar" id="navbar">
         <div class="navbar-left">
-            <!-- <div class="navbar-icon" id="menu-icon" onclick="openNav()"><i class="fas fa-bars"></i></div> -->
             <div class="logo"><img src="images/logo.png" alt="logo"></div>
         </div>
         <div class="navbar-center">
-            <h1>Lahore builders</h1>
+            <h1>Lahore Builders</h1>
         </div>
         <div class="navbar-right">
-            <div class="navbar-item">About us</div>
+            <div class="navbar-item">About Us</div>
             <div class="navbar-item">Project</div>
             <div class="navbar-item">Blog</div>
             <div class="navbar-item">Services</div>
             <div class="navbar-item">Contact</div>
         </div>
     </nav>
+    <!-- Hero section -->
+<section class="hero">
+<div class="hero-text">
+    Architecture is our passion,design is our innovation
+</div>
+</section>
+<!-- third section -->
+<section class="specialization-section">
+    <h3>Your Partner in Carving Your Space</h3>
+    <h2>We Specialize in These Fields.</h2>
+    <div class="specialization-items">
+        <div class="specialization-item">
+            <h4><span class="icon fas fa-plus"></span> Architecture Design</h4>
+            <p>Description for Architecture Design.</p>
+        </div>
+        <div class="specialization-item">
+            <h4><span class="icon fas fa-plus"></span> Structure Design</h4>
+            <p>Description for Structure Design.</p>
+        </div>
+        <div class="specialization-item">
+            <h4><span class="icon fas fa-plus"></span> MEP Design</h4>
+            <p>Description for MEP Design.</p>
+        </div>
+        <div class="specialization-item">
+            <h4><span class="icon fas fa-plus"></span> Interior Design</h4>
+            <p>Description for Interior Design.</p>
+        </div>
+        <div class="specialization-item">
+            <h4><span class="icon fas fa-plus"></span> Visualization</h4>
+            <p>Description for Visualization.</p>
+        </div>
+        <div class="specialization-item">
+            <h4><span class="icon fas fa-plus"></span> Concept Development</h4>
+            <p>Description for Concept Development.</p>
+        </div>
+        <div class="specialization-item">
+            <h4><span class="icon fas fa-plus"></span> Construction</h4>
+            <p>Description for Construction.</p>
+        </div>
+        <div class="specialization-item">
+            <h4><span class="icon fas fa-plus"></span> Engineering Supervision</h4>
+            <p>Description for Engineering Supervision.</p>
+        </div>
+        <div class="specialization-item">
+            <h4><span class="icon fas fa-plus"></span> Soil Testing</h4>
+            <p>Description for Soil Testing.</p>
+        </div>
+    </div>
+</section>
     <script>
         window.addEventListener('scroll', () => {
-            const sidebar = document.getElementById("navbar");
-            console.log('Scroll event detected'); // Debugging: Log scroll event detection
+            const navbar = document.getElementById("navbar");
             if (window.scrollY > 0) {
-                console.log('Applying styles for scrolled state'); // Debugging: Log state change
-                sidebar.style.backgroundColor = "#fff"; // Change to desired color when scrolled
-                sidebar.style.color = "#333"; // Change text color
-                sidebar.style.top = "0%";
-                sidebar.style.position = "fixed"; // Fix the position syntax
-                sidebar.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)"; // Add a shadow
+                navbar.style.backgroundColor = "#fff";
+                navbar.style.color = "#333";
+                navbar.style.top = "0";
+                navbar.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
             } else {
-                console.log('Reverting styles for top state'); // Debugging: Log state change
-                sidebar.style.backgroundColor = ""; // Revert to original background color
-                sidebar.style.top = "";
-                sidebar.style.color = ""; // Revert to original text color
-                sidebar.style.boxShadow = ""; // Remove the shadow
+                navbar.style.backgroundColor = "";
+                navbar.style.color = "";
+                navbar.style.boxShadow = "";
             }
         });
-            </script>
-<script src="js/nav.js"></script>        
+    </script>
+    <script src="js/toggle.js"></script>
 </body>
 </html>
