@@ -110,8 +110,8 @@ body {
         justify-content: center; /* Center items within the section */
         gap: 10px; /* Adjust gap to fit content */
         padding: 0 10px; /* Add padding to the left and right */
-        margin-left: 5%; /* Add margin from left to ensure visibility */
-        margin-right: 5%;
+        margin-left: 10px; 
+        margin-right: 10px;
     }
 
     .navbar-left {
