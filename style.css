@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    position: fixed; /* Use fixed to keep the navbar at the top of the viewport */
+    position: fixed; /* Keep the navbar at the top of the viewport */
     top: 0; /* Aligns the navbar at the top of the page */
     left: 0;
     width: 100%; /* Ensure the navbar spans the full width of the viewport */
@@ -12,13 +12,21 @@
     transition: background-color 0.3s ease;
     z-index: 99;
 }
-
+.logo img{
+    width: 130px;
+    height: auto;
+}
 .navbar:hover {
     background-color: #f0f0f0;
 }
-#menu-icon{
+
+#menu-icon {
     display: none;
+    font-size: 24px; /* Increase the size of the menu icon */
+    cursor: pointer;
+    margin-right: 10px; /* Add some margin to the right */
 }
+
 .navbar-left, .navbar-center, .navbar-right {
     display: flex;
     align-items: center;
@@ -33,6 +41,7 @@
 
 .navbar-right {
     gap: 15px;
+    margin-right: 10%;
 }
 
 .navbar-item, .navbar-icon {
@@ -63,14 +72,35 @@
         width: 100%; /* Ensure full width for each section */
         justify-content: space-between; /* Space out items within each section */
     }
-#menu-icon{
-    display:block;
-}
+
+    #menu-icon {
+        display: block;
+    }
+
     .navbar-center {
         justify-content: center; /* Center the title on smaller screens */
+        order: 1; /* Ensure the title comes first */
+    }
+
+    .navbar-left {
+        width: 100%;
+        justify-content: space-between;
+        order: 0; /* Ensure the menu icon comes first */
     }
 
     .navbar-right {
         justify-content: flex-end; /* Align right section items to the end */
+        order: 2; /* Ensure the right section comes last */
+        width: 100%; /* Make sure the right section takes full width */
+    }
+
+    .navbar-left #menu-icon {
+        order: 0;
+    }
+
+    .navbar-left h1 {
+        order: 1;
+        flex-grow: 1; /* Ensure the title takes available space */
+        text-align: center; /* Center the title */
     }
 }
