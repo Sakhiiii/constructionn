@@ -1,11 +1,13 @@
 .navbar {
     display: flex;
-    position:relative;
-    width: 98%;
+    position: fixed; /* Use fixed to keep the navbar at the top of the viewport */
+    top: 0; /* Aligns the navbar at the top of the page */
+    left: 0;
+    width: 100%; /* Ensure the navbar spans the full width of the viewport */
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color:transparent;
+    background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
     z-index: 99;
@@ -22,7 +24,7 @@
 
 .navbar-center h1 {
     margin: 0;
-    font-family: 'Cinzel', serif; /* Use a similar font to the one in the image */
+    font-family: 'Cinzel', serif; /* Ensure this font is imported in your HTML */
     font-size: 24px;
     font-weight: normal;
 }
@@ -46,4 +48,25 @@
 
 .fas {
     margin-left: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar-left, .navbar-center, .navbar-right {
+        width: 100%; /* Ensure full width for each section */
+        justify-content: space-between; /* Space out items within each section */
+    }
+
+    .navbar-center {
+        justify-content: center; /* Center the title on smaller screens */
+    }
+
+    .navbar-right {
+        justify-content: flex-end; /* Align right section items to the end */
+    }
 }
