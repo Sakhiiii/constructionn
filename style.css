@@ -12,10 +12,12 @@
     transition: background-color 0.3s ease;
     z-index: 99;
 }
-.logo img{
+
+.logo img {
     width: 130px;
     height: auto;
 }
+
 .navbar:hover {
     background-color: #f0f0f0;
 }
@@ -52,6 +54,10 @@
     align-items: center;
 }
 
+.navbar-center h1 {
+    font-size: 44px;
+}
+
 .navbar-item:hover, .navbar-icon:hover {
     color: #000;
     background-color: rgba(0, 0, 0, 0.1);
@@ -65,7 +71,7 @@
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start */
+        align-items: center; /* Align items to the center */
     }
 
     .navbar-left, .navbar-center, .navbar-right {
@@ -75,6 +81,10 @@
 
     #menu-icon {
         display: block;
+    }
+
+    .navbar-center h1 {
+        font-size: 32px;
     }
 
     .navbar-center {
@@ -98,9 +108,15 @@
         order: 0;
     }
 
-    .navbar-left h1 {
+    .navbar-left .logo {
         order: 1;
-        flex-grow: 1; /* Ensure the title takes available space */
-        text-align: center; /* Center the title */
+        display: flex;
+        justify-content: center;
+        width: 100%; /* Make sure the logo takes full width */
+        text-align: center; /* Center the logo */
+    }
+    
+    .navbar-left h1 {
+        display: none; /* Hide the title in the left section on mobile screens */
     }
 }
