@@ -16,7 +16,9 @@
 .navbar:hover {
     background-color: #f0f0f0;
 }
-
+#menu-icon{
+    display: none;
+}
 .navbar-left, .navbar-center, .navbar-right {
     display: flex;
     align-items: center;
@@ -61,7 +63,9 @@
         width: 100%; /* Ensure full width for each section */
         justify-content: space-between; /* Space out items within each section */
     }
-
+#menu-icon{
+    display:block;
+}
     .navbar-center {
         justify-content: center; /* Center the title on smaller screens */
     }
