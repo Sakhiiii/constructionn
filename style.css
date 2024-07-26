@@ -83,6 +83,7 @@ body {
     .navbar {
         flex-direction: column; /* Stack items vertically on smaller screens */
         align-items: center; /* Align items to the center */
+        padding: 10px 10px; /* Reduce padding to fit content */
     }
 
     .navbar-left, .navbar-center, .navbar-right {
@@ -113,6 +114,8 @@ body {
         justify-content: flex-end; /* Align right section items to the end */
         order: 2; /* Ensure the right section comes last */
         width: 100%; /* Make sure the right section takes full width */
+        gap: 15px; /* Add space between elements */
+        padding: 0 10px; /* Add padding to the left and right */
     }
 
     .navbar-left #menu-icon {
@@ -130,9 +133,4 @@ body {
     .navbar-left h1 {
         display: none; /* Hide the title in the left section on mobile screens */
     }
-    .navbar-right {
-        gap: 0px;
-        margin-left: 5%;
-        margin-right: 5%;
-    }    
 }
