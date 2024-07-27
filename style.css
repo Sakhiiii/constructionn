@@ -259,3 +259,78 @@ body {
         margin-top: 5px;
     }
 }
+/* remaining third section */
+.third-remaining-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.third-remaining-header {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.third-remaining-fields {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.third-remaining-field {
+    margin: 20px; /* Add margin for spacing on smaller screens */
+    text-align: center;
+    flex: 1; /* Allow items to grow and shrink equally */
+    min-width: 150px; /* Ensure a minimum width for smaller screens */
+}
+
+.third-remaining-field p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.third-remaining-field .third-remaining-number {
+    font-size: 68px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 10px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .third-remaining-header {
+        font-size: 32px;
+    }
+    .third-remaining-field .third-remaining-number {
+        font-size: 42px;
+    }
+    .third-remaining-field p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .third-remaining-header {
+        font-size: 28px;
+    }
+    .third-remaining-field .third-remaining-number {
+        font-size: 36px;
+    }
+    .third-remaining-field p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .third-remaining-header {
+        font-size: 24px;
+    }
+    .third-remaining-field .third-remaining-number {
+        font-size: 30px;
+    }
+    .third-remaining-field p {
+        font-size: 12px;
+    }
+}

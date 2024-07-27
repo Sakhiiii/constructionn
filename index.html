@@ -7,8 +7,49 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        #cursor {
+            position: absolute;
+            width: 20px; /* Normal size */
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(255, 0, 0, 0.8); /* Bright red color */
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), /* Intense shadow */
+                        0 0 30px rgba(255, 0, 0, 0.6), /* Strong outer glow */
+                        0 0 45px rgba(255, 0, 0, 0.4); /* Enhanced outer glow */
+            pointer-events: none; /* Prevent the cursor from blocking interactions */
+            transition: width 0.2s ease, height 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for size and shadow change */
+            transform: translate(-50%, -50%); /* Center the cursor */
+            z-index:300;
+        }
+
+        #cursor.moving {
+            width: 40px; /* Increased size when moving */
+            height: 40px;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 1), /* Larger shadow */
+                        0 0 50px rgba(255, 0, 0, 0.8), /* More pronounced outer glow */
+                        0 0 75px rgba(255, 0, 0, 0.6); /* Stronger outer glow */
+            animation: pulse 1s infinite; /* Pulsing animation */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div id="cursor"></div>
     <nav class="navbar" id="navbar">
         <div class="navbar-left">
             <div class="logo"><img src="images/logo.png" alt="logo"></div>
@@ -72,6 +113,24 @@
             <p>Description for Soil Testing.</p>
         </div>
     </div>
+    <!-- remaining third section -->
+    <div class="third-remaining-container">
+        <div class="third-remaining-header">We specialize in these fields.</div>
+        <div class="third-remaining-fields">
+            <div class="third-remaining-field">
+                <div class="third-remaining-number" id="number1">𝟘</div>
+                <p>Clients Around the World</p>
+            </div>
+            <div class="third-remaining-field">
+                <div class="third-remaining-number" id="number2">𝟘</div>
+                <p>Projects Completed</p>
+            </div>
+            <div class="third-remaining-field">
+                <div class="third-remaining-number" id="number3">𝟘K</div>
+                <p>Square Feet</p>
+            </div>
+        </div>
+    </div>
 </section>
     <script>
         window.addEventListener('scroll', () => {
@@ -89,5 +148,7 @@
         });
     </script>
     <script src="js/toggle.js"></script>
+    <script src="js/count.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>
