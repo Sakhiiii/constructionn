@@ -359,7 +359,7 @@ body {
 .fourth-sliding-text {
     font-size: 3em;
     font-family: Arial, sans-serif;
-    color:var(--text-color);
+    color: var(--text-color);
     display: inline-block;
     animation: fourth-slide 10s linear infinite;
 }
@@ -375,24 +375,36 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
+    .fourth-background {
+        height: 350px; /* Adjust height for different screen sizes */
+    }
     .fourth-sliding-text {
         font-size: 2.5em;
     }
 }
 
 @media (max-width: 992px) {
+    .fourth-background {
+        height: 300px; /* Adjust height for different screen sizes */
+    }
     .fourth-sliding-text {
         font-size: 2em;
     }
 }
 
 @media (max-width: 768px) {
+    .fourth-background {
+        height: 250px; /* Adjust height for different screen sizes */
+    }
     .fourth-sliding-text {
         font-size: 1.5em;
     }
 }
 
 @media (max-width: 576px) {
+    .fourth-background {
+        height: 200px; /* Adjust height for different screen sizes */
+    }
     .fourth-sliding-text {
         font-size: 1.2em;
     }
